@@ -1,0 +1,6 @@
+-- Active: 1643657430298@@127.0.0.1@3306@nw202202
+CREATE TABLE `nw202202`.`categorias` (
+  `catid` BIGINT(8) NOT NULL AUTO_INCREMENT,
+  `catnom` VARCHAR(45) NULL,
+  `catest` CHAR(3) NULL DEFAULT 'ACT',
+  PRIMARY KEY (`catid`));
