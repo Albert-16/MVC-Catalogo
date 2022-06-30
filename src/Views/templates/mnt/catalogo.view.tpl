@@ -6,7 +6,7 @@
         <input type="hidden" name="page" value="mnt_catalogo"/>
         <input type="hidden" name="PageIndex" value="1" />
 
-        <input type="search" class="form-control col-8" id="UsuarioBusqueda" name="UsuarioBusqueda" value="{{UsuarioBusqueda}}" placeholder="Ingrese su busqueda">
+        <input type="search" class="form-control col-8" id="UsuarioBusqueda" name="UsuarioBusqueda" value="{{UsuarioBusqueda}}" placeholder="Ingrese su búsqueda">
         <button type="submit" class="btn btn-primary mx-2">Buscar</button>
     </form>
 
@@ -30,14 +30,14 @@
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="UsuarioBusquedaByPrice" id="UsuarioBusquedaByPrice" value="500-2000">
                   <label class="form-check-label" for="UsuarioBusquedaByPrice">
-                    500 - 2000
+                    500 - 2,000
                   </label>
                 </div>
                 <br>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="UsuarioBusquedaByPrice" id="UsuarioBusquedaByPrice" value="2000-10000">
                   <label class="form-check-label" for="UsuarioBusquedaByPrice">
-                    2000 +
+                    2,000 +
                   </label>
                 </div>
               

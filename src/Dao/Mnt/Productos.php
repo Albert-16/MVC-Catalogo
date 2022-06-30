@@ -86,26 +86,41 @@ class Productos extends Table
         $invPrdEst,
         $invPrdPadre,
         $invPrdFactor,
-        $invPrdVnd
+        $invPrdVnd,
+        $invPrdPrecioVenta,
+        $invPrdPrecioCompra,
+        $invPrdStock
     ) {
+
         $sqlstr = "INSERT INTO `productos`
-(`invPrdBrCod`, `invPrdCodInt`,
-`invPrdDsc`, `invPrdTip`, `invPrdEst`,
-`invPrdPadre`, `invPrdFactor`, `invPrdVnd`)
+(`invPrdBrCod`,
+`invPrdCodInt`,
+`invPrdDsc`,
+`invPrdTip`,
+`invPrdEst`,
+`invPrdPadre`,
+`invPrdFactor`,
+`invPrdVnd`,
+`invPrdPrecioVenta`,
+`invPrdPrecioCompra`,
+`invPrdStock`)
 VALUES
 (:invPrdBrCod, :invPrdCodInt,
 :invPrdDsc, :invPrdTip, :invPrdEst,
-:invPrdPadre, :invPrdFactor, :invPrdVnd);
+:invPrdPadre, :invPrdFactor, :invPrdVnd, :invPrdPrecioVenta, :invPrdPrecioCompra, :invPrdStock);
 ";
         $sqlParams = [
-            "invPrdBrCod" => $invPrdBrCod ,
-            "invPrdCodInt" => $invPrdCodInt ,
-            "invPrdDsc" => $invPrdDsc ,
-            "invPrdTip" => $invPrdTip ,
-            "invPrdEst" => $invPrdEst ,
-            "invPrdPadre" => $invPrdPadre ,
-            "invPrdFactor" =>  $invPrdFactor ,
-            "invPrdVnd" => $invPrdVnd
+            "invPrdBrCod" => $invPrdBrCod,
+            "invPrdCodInt" => $invPrdCodInt,
+            "invPrdDsc" => $invPrdDsc,
+            "invPrdTip" => $invPrdTip,
+            "invPrdEst" => $invPrdEst,
+            "invPrdPadre" => $invPrdPadre,
+            "invPrdFactor" =>  $invPrdFactor,
+            "invPrdVnd" => $invPrdVnd,
+            "invPrdPrecioVenta" => $invPrdPrecioVenta,
+            "invPrdPrecioCompra" => $invPrdPrecioCompra,
+            "invPrdStock" => $invPrdStock
         ];
         return self::executeNonQuery($sqlstr, $sqlParams);
     }
@@ -133,12 +148,16 @@ VALUES
         $invPrdPadre,
         $invPrdFactor,
         $invPrdVnd,
+        $invPrdPrecioVenta,
+        $invPrdPrecioCompra,
+        $invPrdStock,
         $invPrdId
     ) {
         $sqlstr = "UPDATE `productos` set
 `invPrdBrCod`=:invPrdBrCod, `invPrdCodInt`=:invPrdCodInt,
 `invPrdDsc`=:invPrdDsc, `invPrdTip`=:invPrdTip, `invPrdEst`=:invPrdEst,
-`invPrdPadre`=:invPrdPadre, `invPrdFactor`=:invPrdFactor, `invPrdVnd`=:invPrdVnd
+`invPrdPadre`=:invPrdPadre, `invPrdFactor`=:invPrdFactor, `invPrdVnd`=:invPrdVnd, 
+`invPrdPrecioVenta`=:invPrdPrecioVenta,`invPrdPrecioCompra`=:invPrdPrecioCompra,`invPrdStock` = :invPrdStock
  where `invPrdId` = :invPrdId;";
         $sqlParams = array(
             "invPrdBrCod" => $invPrdBrCod,
@@ -149,6 +168,9 @@ VALUES
             "invPrdPadre" => $invPrdPadre,
             "invPrdFactor" => $invPrdFactor,
             "invPrdVnd" => $invPrdVnd,
+            "invPrdPrecioVenta" => $invPrdPrecioVenta,
+            "invPrdPrecioCompra" => $invPrdPrecioCompra,
+            "invPrdStock" => $invPrdStock,
             "invPrdId" => $invPrdId
         );
         return self::executeNonQuery($sqlstr, $sqlParams);

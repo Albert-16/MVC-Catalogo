@@ -78,6 +78,12 @@ class Producto extends PublicController
         $this->viewData["invPrdEstArr"] = array();
         $this->viewData["invPrdVnd"] = "";
         $this->viewData["invPrdVndArr"] = array();
+        $this->viewData["invPrdPrecioVenta"] = "";
+        $this->viewData["invPrdPrecioVentaArr"] = array();
+        $this->viewData["invPrdPrecioCompra"] = "";
+        $this->viewData["invPrdPrecioCompraArr"] = array();
+        $this->viewData["invPrdStock"] = "";
+        $this->viewData["invPrdStockArr"] = array();
         $this->viewData["btnEnviarText"] = "Guardar";
         $this->viewData["readonly"] = false;
         $this->viewData["showBtn"] = true;
@@ -167,6 +173,21 @@ class Producto extends PublicController
                 = "La descripción es requerida";
             $hasErrors = true;
         }
+        if (Validators::IsEmpty($this->viewData["invPrdPrecioVenta"])) {
+            $this->viewData["error_invPrdPrecioVenta"][]
+                = "La descripción es requerida";
+            $hasErrors = true;
+        }
+        if (Validators::IsEmpty($this->viewData["invPrdPrecioCompra"])) {
+            $this->viewData["error_invPrdPrecioCompra"][]
+                = "La descripción es requerida";
+            $hasErrors = true;
+        }
+        if (Validators::IsEmpty($this->viewData["invPrdStock"])) {
+            $this->viewData["error_invPrdStock"][]
+                = "La descripción es requerida";
+            $hasErrors = true;
+        }
         error_log(json_encode($this->viewData));
         // Ahora procedemos con las modificaciones al registro
         if (!$hasErrors) {
@@ -181,7 +202,10 @@ class Producto extends PublicController
                     $this->viewData["invPrdEst"],
                     null,
                     1,
-                    $this->viewData["invPrdVnd"]
+                    $this->viewData["invPrdVnd"],
+                    $this->viewData["invPrdPrecioVenta"],
+                    $this->viewData["invPrdPrecioCompra"],
+                    $this->viewData["invPrdStock"]
                 );
                 if ($result) {
                         \Utilities\Site::redirectToWithMsg(
@@ -200,6 +224,9 @@ class Producto extends PublicController
                     null,
                     1,
                     $this->viewData["invPrdVnd"],
+                    $this->viewData["invPrdPrecioVenta"],
+                    $this->viewData["invPrdPrecioCompra"],
+                    $this->viewData["invPrdStock"],
                     intval($this->viewData["invPrdId"])
                 );
                 if ($result) {

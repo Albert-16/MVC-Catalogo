@@ -3,14 +3,17 @@
 
 </section>
 <section>
-  <table>
-    <thead>
+  <table class="table">
+    <thead class="thead-dark">
       <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Tipo</th>
-        <th>Estado</th>
-        <th>Vendible</th>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Vendible</th>
+        <th scope="col">Precio Venta</th>
+        <th scope="col">En Stok</th>
+
         <th><a href="index.php?page=Mnt-Producto&mode=INS">Nuevo</a></th>
       </tr>
     </thead>
@@ -22,6 +25,9 @@
         <td>{{invPrdTip}}</td>
         <td>{{invPrdEst}}</td>
         <td>{{invPrdVnd}}</td>
+        <td>{{invPrdPrecioVenta}}</td>
+        <td>{{invPrdStock}}</td>
+
         <td>
           <a href="index.php?page=Mnt-Producto&mode=UPD&id={{invPrdId}}">Editar</a>
           &NonBreakingSpace;

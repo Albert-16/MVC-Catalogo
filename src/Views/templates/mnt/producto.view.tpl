@@ -56,6 +56,34 @@
       </select>
     </fieldset>
     <fieldset>
+      <label for="invPrdPrecioVenta">Precio Venta</label>
+      <input {{if readonly}}readonly{{endif readonly}} type="text" id="invPrdPrecioVenta" name="invPrdPrecioVenta" placeholder="Descripción" value="{{invPrdPrecioVenta}}" />
+      {{if error_invPrdPrecioVenta}}
+          {{foreach error_invPrdPrecioVenta}}
+            <div class="error">{{this}}</div>
+          {{endfor error_invPrdPrecioVenta}}
+      {{endif error_invPrdPrecioVenta}}
+    </fieldset>
+    <fieldset>
+      <label for="invPrdPrecioCompra">Precio Compra</label>
+      <input {{if readonly}}readonly{{endif readonly}} type="text" id="invPrdPrecioCompra" name="invPrdPrecioCompra" placeholder="Descripción" value="{{invPrdPrecioCompra}}" />
+      {{if error_invPrdPrecioCompra}}
+          {{foreach error_invPrdPrecioCompra}}
+            <div class="error">{{this}}</div>
+          {{endfor error_invPrdPrecioCompra}}
+      {{endif error_invPrdPrecioCompra}}
+    </fieldset>
+    <fieldset>
+      <label for="invPrdStock">Stock</label>
+      <input {{if readonly}}readonly{{endif readonly}} type="text" id="invPrdStock" name="invPrdStock" placeholder="Descripción" value="{{invPrdStock}}" />
+      {{if error_invPrdStock}}
+          {{foreach error_invPrdStock}}
+            <div class="error">{{this}}</div>
+          {{endfor error_invPrdStock}}
+      {{endif error_invPrdStock}}
+    </fieldset>
+
+    <fieldset>
       {{if showBtn}}
         <button type="submit" name="btnEnviar">{{btnEnviarText}}</button>
         &nbsp;
