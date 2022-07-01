@@ -199,7 +199,7 @@ class Productos extends Table
     {
         return self::obtenerRegistros("SELECT * FROM productos p INNER JOIN media m on p.ProdId = m.ProdId WHERE ProdStock > 0 AND ProdEst = 'ACT' GROUP BY p.ProdId ORDER BY p.ProdId DESC LIMIT 8;", array());
     }
-*/
+    */
 
     /**
      * Contar cantidad de productos que tenemos en el inventario y que estan activos

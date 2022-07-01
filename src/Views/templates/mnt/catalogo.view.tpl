@@ -49,7 +49,7 @@
             <div class="row">
               <!--Recorremos los ciclo foreach agg la imagen por cada recorrido. -->
                 {{foreach Productos}}
-            <div class="card" style="width: 18rem;">
+              <div class="card" style="width: 18rem;">
                
                 <img src="public/imgs/Productos/invPrdImagen1.png" class="card-img-top" alt="new product">
                 <div class="card-body">
@@ -58,12 +58,11 @@
                   <p class="card-text">{{invPrdDsc}}</p>
                   <!--Falta darle funcion al boton ver mas -->
                   <button href="#" class="btn btn-primary mx-2">ver más</button>
-                </div>
-               
+                </div>   
             </div>
             &nbsp;
             {{endfor Productos}}
-        </div>
+          </div>
         
           </div>
           <div class="row">
