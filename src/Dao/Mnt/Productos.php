@@ -67,15 +67,17 @@ class Productos extends Table
     /**
      * Insert into Productos
      *
-     * @param [type] $invPrdBrCod  description
-     * @param [type] $invPrdCodInt description
-     * @param [type] $invPrdDsc    description
-     * @param [type] $invPrdTip    description
-     * @param [type] $invPrdEst    description
-     * @param [type] $invPrdPadre  description
-     * @param [type] $invPrdFactor description
-     * @param [type] $invPrdVnd    description
-     *
+     * @param [type] $invPrdBrCod         description
+     * @param [type] $invPrdCodInt        descriptions
+     * @param [type] $invPrdDsc           description
+     * @param [type] $invPrdTip           description
+     * @param [type] $invPrdEst           description
+     * @param [type] $invPrdPadre         description
+     * @param [type] $invPrdFactor        description
+     * @param [type] $invPrdVnd           description
+     * @param [type] $invPrdPrecioVenta   description
+     * @param [type] $invPrdPrecioCompra  description
+     * @param [type] $invPrdStock         description     
      * @return void
      */
     public static function insert(
@@ -91,24 +93,23 @@ class Productos extends Table
         $invPrdPrecioCompra,
         $invPrdStock
     ) {
-
         $sqlstr = "INSERT INTO `productos`
-(`invPrdBrCod`,
-`invPrdCodInt`,
-`invPrdDsc`,
-`invPrdTip`,
-`invPrdEst`,
-`invPrdPadre`,
-`invPrdFactor`,
-`invPrdVnd`,
-`invPrdPrecioVenta`,
-`invPrdPrecioCompra`,
-`invPrdStock`)
-VALUES
-(:invPrdBrCod, :invPrdCodInt,
-:invPrdDsc, :invPrdTip, :invPrdEst,
-:invPrdPadre, :invPrdFactor, :invPrdVnd, :invPrdPrecioVenta, :invPrdPrecioCompra, :invPrdStock);
-";
+        (`invPrdBrCod`,
+        `invPrdCodInt`,
+        `invPrdDsc`,
+        `invPrdTip`,
+        `invPrdEst`,
+        `invPrdPadre`,
+        `invPrdFactor`,
+        `invPrdVnd`,
+        `invPrdPrecioVenta`,
+        `invPrdPrecioCompra`,
+        `invPrdStock`)
+        VALUES
+        (:invPrdBrCod, :invPrdCodInt,
+        :invPrdDsc, :invPrdTip, :invPrdEst,
+        :invPrdPadre, :invPrdFactor, :invPrdVnd, :invPrdPrecioVenta, :invPrdPrecioCompra, :invPrdStock);
+        ";
         $sqlParams = [
             "invPrdBrCod" => $invPrdBrCod,
             "invPrdCodInt" => $invPrdCodInt,
@@ -154,11 +155,12 @@ VALUES
         $invPrdId
     ) {
         $sqlstr = "UPDATE `productos` set
-`invPrdBrCod`=:invPrdBrCod, `invPrdCodInt`=:invPrdCodInt,
-`invPrdDsc`=:invPrdDsc, `invPrdTip`=:invPrdTip, `invPrdEst`=:invPrdEst,
-`invPrdPadre`=:invPrdPadre, `invPrdFactor`=:invPrdFactor, `invPrdVnd`=:invPrdVnd, 
-`invPrdPrecioVenta`=:invPrdPrecioVenta,`invPrdPrecioCompra`=:invPrdPrecioCompra,`invPrdStock` = :invPrdStock
- where `invPrdId` = :invPrdId;";
+        `invPrdBrCod`=:invPrdBrCod, `invPrdCodInt`=:invPrdCodInt,
+        `invPrdDsc`=:invPrdDsc, `invPrdTip`=:invPrdTip, `invPrdEst`=:invPrdEst,
+        `invPrdPadre`=:invPrdPadre, `invPrdFactor`=:invPrdFactor, `invPrdVnd`=:invPrdVnd, 
+        `invPrdPrecioVenta`=:invPrdPrecioVenta,`invPrdPrecioCompra`=:invPrdPrecioCompra,
+        `invPrdStock` = :invPrdStock
+        where `invPrdId` = :invPrdId;";
         $sqlParams = array(
             "invPrdBrCod" => $invPrdBrCod,
             "invPrdCodInt" => $invPrdCodInt,
