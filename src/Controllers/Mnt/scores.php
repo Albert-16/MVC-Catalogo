@@ -5,7 +5,7 @@
  *
  * @category Controller
  * @package  Controllers\Mnt
- * @author   Angel David Quintanilla
+ * @author   Grupo #1
  * @license  Comercial http://
  * @version  CVS:1.0.0
  * @link     http://url.com
@@ -24,7 +24,7 @@ use Views\Renderer;
  *
  * @category Public
  * @package  Controllers\Mnt;
- * @author   Angel David Quintanilla
+ * @author   Grupo #1
  * @license  MIT http://
  * @link     http://
  */

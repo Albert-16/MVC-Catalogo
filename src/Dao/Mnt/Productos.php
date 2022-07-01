@@ -5,7 +5,7 @@
  *
  * @category Data_Model
  * @package  Models${1:modelo}
- * @author   Angel David Quintanilla
+ * @author   Grupo #1
  * @license  Comercial http://
  *
  * @version 1.0.0
@@ -22,7 +22,7 @@ use Dao\Table;
  *
  * @category Data_Model
  * @package  Dao.Table
- * @author  Angel David Quintanilla
+ * @author  Grupo #1
  * @license  Comercial http://
  *
  * @link http://url.com

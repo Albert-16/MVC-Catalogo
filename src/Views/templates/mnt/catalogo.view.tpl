@@ -9,8 +9,6 @@
         <input type="search" class="form-control col-8" id="UsuarioBusqueda" name="UsuarioBusqueda" value="{{UsuarioBusqueda}}" placeholder="Ingrese su búsqueda">
         <button type="submit" class="btn btn-primary mx-2">Buscar</button>
     </form>
-
-
     <div class="container-fluid">
         <div class="row align-items-start">
           <div class="col-md-auto">
@@ -59,7 +57,7 @@
                   <h5 class="card-title">Lps. {{invPrdPrecioVenta}}</h5>
                   <p class="card-text">{{invPrdDsc}}</p>
                   <!--Falta darle funcion al boton ver mas -->
-                  <button href="#" class="btn btn-primary mx-2"">ver más</button>
+                  <button href="#" class="btn btn-primary mx-2">ver más</button>
                 </div>
                
             </div>
