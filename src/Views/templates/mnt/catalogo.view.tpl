@@ -40,7 +40,6 @@
                     2,000 +
                   </label>
                 </div>
-              
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary mx-2">Buscar</button>
