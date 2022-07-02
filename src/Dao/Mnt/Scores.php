@@ -94,8 +94,7 @@ class Scores extends Table
         `scoreprice`, `scoredocurl`, `scoreest`)
         VALUES
         (:scoredsc,:scoreauthor, :scoregenre, :scoreyear, :scoresales, :scoreprice, :scoredocurl,
-        :scoreest);
-        ";
+        :scoreest);";
         $sqlParams = [
             "scoredsc" => $scoredsc,
             "scoreauthor" => $scoreauthor,
@@ -134,7 +133,7 @@ class Scores extends Table
         $scoreid
     ) {
 
-        $sqlstr = "UPDATE `nw202202`.`scores`SET
+        $sqlstr = "UPDATE `nw202202`.`scores` SET
         `scoredsc` = :scoredsc,
         `scoreauthor` = :scoreauthor,
         `scoregenre` = :scoregenre,
