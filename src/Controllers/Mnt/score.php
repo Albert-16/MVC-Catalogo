@@ -65,12 +65,19 @@ class Score extends PublicController
         $this->viewData["crsf_token"] = "";
         $this->viewData["scoreid"] = "";
         $this->viewData["scoredsc"] = "";
+        $this->viewData["error_scoredsc"] = array();
         $this->viewData["scoreauthor"] = "";
+        $this->viewData["error_scoreauthor"] = array();
         $this->viewData["scoregenre"] = "";
+        $this->viewData["error_scoregenre"] = array();
         $this->viewData["scoreyear"] = "";
+        $this->viewData["error_scoreyear"] = array();
         $this->viewData["scoresales"] = "";
+        $this->viewData["error_scoresales"] = array();
         $this->viewData["scoreprice"] = "";
+        $this->viewData["error_scoreprice"] = array();
         $this->viewData["scoredocurl"] = "";
+        $this->viewData["error_scoredocurl"] = array();
         $this->viewData["scoreest"] = "";
         $this->viewData["scoreestArr"] = array();
 
