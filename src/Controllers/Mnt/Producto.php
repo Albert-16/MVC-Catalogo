@@ -79,11 +79,11 @@ class Producto extends PublicController
         $this->viewData["invPrdVnd"] = "";
         $this->viewData["invPrdVndArr"] = array();
         $this->viewData["invPrdPrecioVenta"] = "";
-        $this->viewData["invPrdPrecioVentaArr"] = array();
+        $this->viewData["error_invPrdPrecioVenta"] = array();
         $this->viewData["invPrdPrecioCompra"] = "";
-        $this->viewData["invPrdPrecioCompraArr"] = array();
+        $this->viewData["error_invPrdPrecioCompra"] = array();
         $this->viewData["invPrdStock"] = "";
-        $this->viewData["invPrdStockArr"] = array();
+        $this->viewData["error_invPrdStock"] = array();
         $this->viewData["btnEnviarText"] = "Guardar";
         $this->viewData["readonly"] = false;
         $this->viewData["showBtn"] = true;

@@ -81,7 +81,7 @@ class Funciones extends Table
             "fncod" => $fncod,
             "fndsc" => $fndsc,
             "fnest" => $fnest,
-            "fntyp" => $fntyp
+            "fntyp" => $fntyp,
         ];
         return self::executeNonQuery($sqlstr, $sqlParams);
     }
@@ -97,7 +97,6 @@ class Funciones extends Table
      */
     public static function update($fncod, $fndsc, $fnest, $fntyp){
         $sqlstr = "UPDATE `nw202202`.`funciones` SET
-        `fncod` = :fncod,
         `fndsc` = :fndsc,
         `fnest` = :fnest,
         `fntyp` = :fntyp
@@ -118,7 +117,7 @@ class Funciones extends Table
      * @return void
      */
     public static function delete($fncod){
-        $sqlstr = "DELETE FROM `functions` WHERE `fncod` = :fncod;";
+        $sqlstr = "DELETE FROM `funciones` WHERE `fncod` = :fncod;";
         $sqlParams = array(
             "fncod" => $fncod
         );
@@ -127,3 +126,4 @@ class Funciones extends Table
 
 
 }
+?>
