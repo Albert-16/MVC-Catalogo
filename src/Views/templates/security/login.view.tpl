@@ -30,6 +30,9 @@
     <div class="row right flex-end px-4">
       <button class="primary" id="btnLogin" type="submit">Iniciar Sesión</button>
     </div>
+    <div class="">
+      <a href="index.php?page=sec_Mail">He olvidado mi contraseña</a>
+    </div>
     </section>
   </form>
 </section>
