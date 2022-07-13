@@ -34,8 +34,10 @@
         <li><a href="index.php?page=Mnt_Productos"><i class="fas fa-user-plus"></i>&nbsp;Productos</a></li>
         <li><a href="index.php?page=Mnt_Scores"><i class="fas fa-user-plus"></i>&nbsp;Scores</a></li>
         <li><a href="index.php?page=mnt_catalogo"><i class="fas fa-user-plus"></i>&nbsp;Catalogo de Productos</a></li>
-        <li><a href="index.php?page=mnt_roles"><i class="fas fa-user-plus"></i>&nbsp;Administración de Usuarios</a></li>
-        <li><a href="index.php?page=mnt_funciones"><i class="fas fa-user-plus"></i>&nbsp;Funciones</a></li>
+        <li><a href="index.php?page=mnt_roles"><i class="fas fa-user-plus"></i>&nbsp;Administración de Roles</a></li>
+        <li><a href="index.php?page=mnt_funciones"><i class="fas fa-user-plus"></i>&nbsp;Administración Funciones</a></li>
+        <li><a href="index.php?page=mnt_usuariosMnt"><i class="fas fa-user-plus"></i>&nbsp;Administración Usuarios</a></li>
+
       </ul>
     </nav>
   </header>
