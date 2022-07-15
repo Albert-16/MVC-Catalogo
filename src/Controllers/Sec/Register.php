@@ -4,7 +4,7 @@ namespace Controllers\Sec;
 
 use Controllers\PublicController;
 use \Utilities\Validators;
-use Exception;
+use  Error;
 
 class Register extends PublicController
 {
